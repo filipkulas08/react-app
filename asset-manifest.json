@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.54f582ee.css",
-    "main.js": "/react-app/static/js/main.75ce9416.js",
+    "main.css": "/react-app/static/css/main.e49009f6.css",
+    "main.js": "/react-app/static/js/main.f0a1ebe5.js",
     "static/js/787.b701888c.chunk.js": "/react-app/static/js/787.b701888c.chunk.js",
-    "static/media/logo.svg": "/react-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/lock.svg": "/react-app/static/media/lock.43bc80542ef5257c0cd5.svg",
     "static/media/email.svg": "/react-app/static/media/email.010857445f79810641b5.svg",
     "static/media/close.svg": "/react-app/static/media/close.eb5549356876b565b6c8.svg",
     "static/media/burger-menu.svg": "/react-app/static/media/burger-menu.1d7db8b8962d9800c833.svg",
     "static/media/google.svg": "/react-app/static/media/google.b8e3d0b5176a83b562b3.svg",
     "index.html": "/react-app/index.html",
-    "main.54f582ee.css.map": "/react-app/static/css/main.54f582ee.css.map",
-    "main.75ce9416.js.map": "/react-app/static/js/main.75ce9416.js.map",
+    "main.e49009f6.css.map": "/react-app/static/css/main.e49009f6.css.map",
+    "main.f0a1ebe5.js.map": "/react-app/static/js/main.f0a1ebe5.js.map",
     "787.b701888c.chunk.js.map": "/react-app/static/js/787.b701888c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54f582ee.css",
-    "static/js/main.75ce9416.js"
+    "static/css/main.e49009f6.css",
+    "static/js/main.f0a1ebe5.js"
   ]
 }
