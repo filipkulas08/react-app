@@ -1,0 +1,45 @@
+.office {
+  background-color: $concrete;
+
+  .slider {
+    border-radius: 4px;
+    margin: 20px auto 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      li {
+        @include for-up-to-desktop {
+          height: calc(427px/1.9);
+          width: calc(640px/1.9);
+        }
+
+        background: $silver;
+        display: block;
+        float: left;
+        height: 427px;
+        line-height: 300px;
+        margin: 0;
+        padding: 0;
+
+        position: relative;
+        text-align: center;
+        width: 840px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  h3,
+  h4 {
+    text-align: center;
+  }
+}

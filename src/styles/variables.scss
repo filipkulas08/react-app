@@ -1,0 +1,51 @@
+//paths
+$images: '/src/images';
+$fonts: '/src/fonts';
+$icons: '/src/icons';
+
+//fonts
+//colors
+
+$midnight: #011736;
+$white: #ffffff;
+$black: #000000;
+$jade: #00A36C;
+$polar: #f0fcfc;
+$shark: #2a2b2f;
+$concrete: #f2f2f2;
+$mine-shaft: #222;
+$cod-gray: #111;
+$mine-shaft2: #333;
+$tundora: #444;
+$emperor: #555;
+$silver: #bbb;
+$gallery: #eee;
+$tango: #f47321;
+$catskill-white: #f4f8fa;
+$mako: #454551;
+$alto: #dddddd;
+$dodger-blue: #2196f3;
+$red: #ff0000;
+$mauvelous: #F082AC;
+$prussian-blue: #002447;
+$astronaut-blue: #02315e;
+
+//screen sizes
+$section-width: 1440px;
+
+$breakpoint-phone: 599px;
+$breakpoint-tablet-vertical: 767px;
+$breakpoint-tablet-vertical-up: 768px;
+$breakpoint-tablet-horizontal: 1023px;
+$breakpoint-tablet-horizontal-up: 1024px;
+$breakpoint-desktop: 1169px;
+$breakpoint-desktop-up: 1170px;
+$breakpoint-desktop-secondary-up: 1200px;
+$breakpoint-desktop-large: 1439px;
+$breakpoint-desktop-large-up: $section-width;
+$breakpoint-desktop-large-secondary: 1599px;
+$breakpoint-desktop-big-up: 1800px;
+
+$width: 550px;
+
+$grid-columns: 12;

@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+
+    &-desktop {
+        @include for-desktop-up {
+            display: none;
+        }
+    }
+
+    &-mobile {
+        @include for-up-to-desktop {
+            display: none;
+        }
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 64px;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.justify {
+    @include for-up-to-desktop {
+        text-align: justify;
+    }
+}
+
+button {
+    background-color: #EA4C89;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: color 100ms;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: baseline;
+
+    &:hover,
+    &:focus {
+        background-color: $mauvelous;
+    }
+
+    &.loginButton,
+    &.logoutButton,
+    &.registerButton {
+        display: none;
+        margin: 0 20px;
+
+        &.open {
+            @include for-up-to-desktop {
+                display: none;
+            }
+
+            display: block;
+        }
+    }
+
+}
+
+section {
+    scroll-margin-top: 90px;
+
+    .section-body {
+        @include for-desktop-up {
+            margin: 0 auto;
+            padding: 60px 0;
+            width: $section-width;
+        }
+
+        padding: 40px 0;
+    }
+}
+
+
+
+.backToTopButton {
+    @include for-desktop-up {
+        bottom: 100px;
+        font-size: 18px;
+        letter-spacing: -.18px;
+        line-height: 1.55;
+        padding: 16px 24px 16px 20px;
+        transition: .8s;
+    }
+
+    background-color: $prussian-blue;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 34px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 34px;
+    bottom: 75px;
+    box-shadow: 4px 5px 7px 0 rgba($shark, 0.6%);
+    box-sizing: border-box;
+    color: $white;
+    left: 0;
+    max-width: 68px;
+    overflow: hidden;
+    padding: 20px;
+    position: fixed;
+    white-space: nowrap;
+    z-index: 6;
+
+    &::before {
+        background-image: url(/src/icons/up-arrow.png);
+        background-position: 15%;
+        background-repeat: no-repeat;
+        background-size: 35%;
+        content: "";
+        filter: invert(1);
+        padding-right: 48px;
+    }
+
+    &:hover {
+        @include for-desktop-up {
+            background-color: $astronaut-blue;
+            opacity: 1;
+            max-width: 220px;
+
+            &::before {
+                @include for-desktop-up {
+                    background-position: 25%;
+                    background-size: 50%;
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+}

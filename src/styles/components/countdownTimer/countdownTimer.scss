@@ -1,0 +1,132 @@
+.countdown {
+	@include for-up-to-desktop {
+		max-width: 350px;
+	}
+
+	background: $mine-shaft;
+	background-image: -webkit-linear-gradient(top, $mine-shaft, $mine-shaft2, $mine-shaft2, $mine-shaft);
+	background-image: -moz-linear-gradient(top, $mine-shaft, $mine-shaft2, $mine-shaft2, $mine-shaft);
+	background-image: -ms-linear-gradient(top, $mine-shaft, $mine-shaft2, $mine-shaft2, $mine-shaft);
+	background-image: -o-linear-gradient(top, $mine-shaft, $mine-shaft2, $mine-shaft2, $mine-shaft);
+	border: 1px solid $cod-gray;
+	border-radius: 5px;
+	box-shadow: 0px 0px 8px rgba($black, 0.6);
+	height: 160px;
+	margin: auto;
+	max-width: 465px;
+	padding: 24px 0;
+	position: relative;
+	text-align: center;
+
+	&:before {
+		background: $tundora;
+		background-image: -webkit-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -moz-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -ms-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -o-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		border: 1px solid $cod-gray;
+		border-bottom-left-radius: 6px;
+		border-top-left-radius: 6px;
+		content: "";
+		display: block;
+		height: 65px;
+		left: -10px;
+		position: absolute;
+		top: 48px;
+		width: 8px;
+	}
+
+	&::after {
+		background: $tundora;
+		background-image: -webkit-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -moz-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -ms-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		background-image: -o-linear-gradient(top, $emperor, $tundora, $tundora, $emperor);
+		border: 1px solid $cod-gray;
+		border-bottom-right-radius: 6px;
+		border-top-right-radius: 6px;
+		content: "";
+		display: block;
+		height: 65px;
+		position: absolute;
+		right: -10px;
+		top: 48px;
+		width: 8px;
+	}
+
+	.tiles {
+		position: relative;
+		z-index: 1;
+
+		> span {
+			@include for-up-to-desktop {
+				width: 70px;
+			}
+
+			background-color: #ddd;
+			background-image: -webkit-linear-gradient(top, $silver, $gallery);
+			background-image: -moz-linear-gradient(top, $silver, $gallery);
+			background-image: -ms-linear-gradient(top, $silver, $gallery);
+			background-image: -o-linear-gradient(top, $silver, $gallery);
+			border-radius: 3px;
+			border-top: 1px solid $white;
+			box-shadow: 0px 0px 12px rgba($black, 0.7);
+			color: $cod-gray;
+			display: inline-block;
+			font-size: 48px;
+			margin: 0 7px;
+			max-width: 92px;
+			padding: 18px 0;
+			position: relative;
+			text-align: center;
+			width: 92px;
+
+			&::before {
+				background: $cod-gray;
+				content: "";
+				display: block;
+				height: 13px;
+				left: -3px;
+				padding: 0 3px;
+				position: absolute;
+				top: 41%;
+				width: 100%;
+				z-index: -1;
+			}
+
+			&::after {
+				background: $gallery;
+				border-top: 1px solid $mine-shaft2;
+				content: "";
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				top: 48%;
+				width: 100%;
+			}
+		}
+	}
+
+	.labels {
+		bottom: 8px;
+		height: 25px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+
+		li {
+			@include for-up-to-desktop {
+				width: 80px;
+			}
+
+			color: $tango;
+			display: inline-block;
+			font-size: 15px;
+			text-align: center;
+			text-shadow: 1px 1px 0px $black;
+			text-transform: uppercase;
+			width: 102px;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.introduction {
+    background-color: $concrete;
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+
+        h2,
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        video {
+            @include for-up-to-desktop {
+                width: 100%;
+            }
+
+            margin: 0 auto;
+            width: 800px;
+        }
+    }
+}
