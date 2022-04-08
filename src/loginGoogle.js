@@ -4,10 +4,10 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged  } fro
 const loginGoogle = () => {
     const $loginButton = $('#login');
     const auth = getAuth();
-    let provider = GoogleAuthProvider(auth);
+    let provider = new GoogleAuthProvider();
 
     $loginButton.on('click', () => {
-        signInWithPopup(provider).then(function(firebaseUser) {
+        signInWithPopup(auth, provider).then(function(firebaseUser) {
             localStorage.setItem('myPage.expectSignIn', '1');
             window.location.reload();
         }

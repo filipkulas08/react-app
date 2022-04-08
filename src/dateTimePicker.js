@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import { getAuth, onAuthStateChanged  } from "firebase/auth";
+import { addDoc, where, getDocs, collection, QuerySnapshot } from "firebase/firestore";
+import { datetimepicker } from "jquery-datetimepicker/build/jquery.datetimepicker.full"
 
 const dateTimePicker = (db) => {
     var array = ['8:00', '9:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'];
@@ -7,6 +9,7 @@ const dateTimePicker = (db) => {
     const $timePicker = $('.timepicker');
     const userId = localStorage.getItem('userID');
     const auth = getAuth();
+    console.log(db)
 
     $('#datepicker').datetimepicker({
         onGenerate: function (ct) {
@@ -20,21 +23,17 @@ const dateTimePicker = (db) => {
             const $month = $Fulldate.getMonth() + 1;
             const $day = $Fulldate.getDate();
             var date = $month + '/' + $day + '/' + $year;
-            db.collection("Visits").where("date", "==", date)
-                .get()
-                .then(function (querySnapshot) {
-                    querySnapshot.forEach(function (doc) {
-                        var data = doc.data();
+        
+            getDocs(collection(db, "Visits"), where("date", "==", date)).then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    var data = doc.data();
                         var hour = data.hour;
                         var index = array.indexOf(hour);;
                         if (index !== -1) {
                             array.splice(index, 1);
                         }
-                    });
                 })
-                .catch(function (error) {
-                    console.log("Error getting documents: ", error);
-                });
+            })  
         },
         weekends: [],
         timepicker: false,
@@ -67,7 +66,7 @@ const dateTimePicker = (db) => {
         const $email = $('#email').val();
         const $number = $('#number').val();
 
-        db.collection("Visits").add({
+        addDoc(collection(db, "Visits"), {
                 date: $date,
                 hour: $hour,
                 userId: userId,
@@ -76,17 +75,14 @@ const dateTimePicker = (db) => {
                 lastName:$lasttName,
                 email:$email,
                 phoneNumber:$number,
-
-            })
-            .then((docRef) => {
-                console.log("Document written with ID: ", docRef.id);
-                console.log($date);
-                window.location.reload();
-            })
-            .catch((error) => {
-                console.error("Error adding document: ", error);
-            });
-    })
+        })
+        .then((docRef) => {
+            window.location.reload();
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        })
+    });
 
     onAuthStateChanged(auth, (user) => {
         if (localStorage.getItem('myPage.expectSignIn')) {

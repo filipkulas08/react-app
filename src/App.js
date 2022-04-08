@@ -1,3 +1,4 @@
+import {Helmet} from "react-helmet";
 import './styles/index.css';
 import logo from './icons/logo.svg';
 import close from './icons/close.svg';
@@ -25,6 +26,9 @@ import video from './videos/dental-video.mp4';
 function App() {
   return (
     <div className="App">
+        {/* <Helmet>
+          <script src = 'jquery.datetimepicker.full.min.js' type = 'text/javascript' />
+      </Helmet> */}
       <header className="first-header">
         <div className="columns">
             <section className="col col-large-12-of-12 col-medium-12-of-12 col-small-12-of-12">

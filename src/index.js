@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import $ from 'jquery';
@@ -22,6 +21,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 const Custom = () => {
   const $body = $('body');
   const $document = $(document);
@@ -45,13 +45,13 @@ const Custom = () => {
     
     
       menu();
-      // loginGoogle();
+      loginGoogle();
       login(perf);
       modal();
-      // dateTimePicker(db);
-      // countdownTimer(db);
       slider();
       backToTop($window);
+      dateTimePicker(db);
+      countdownTimer(db);
   }
 
   init();
