@@ -1,4 +1,4 @@
-import './styles/index.css';
+import './styles/index.min.css';
 import logo from './icons/logo.svg';
 import close from './icons/close.svg';
 import orthodontic from './icons/orthodontic.svg';
