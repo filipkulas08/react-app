@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { getAuth, onAuthStateChanged  } from "firebase/auth";
-import { addDoc, where, getDocs, collection, QuerySnapshot } from "firebase/firestore";
+import { addDoc, where, getDocs, collection } from "firebase/firestore";
 import { datetimepicker } from "jquery-datetimepicker/build/jquery.datetimepicker.full"
 
 const dateTimePicker = (db) => {
@@ -9,7 +9,6 @@ const dateTimePicker = (db) => {
     const $timePicker = $('.timepicker');
     const userId = localStorage.getItem('userID');
     const auth = getAuth();
-    console.log(db)
 
     $('#datepicker').datetimepicker({
         onGenerate: function (ct) {

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import $ from 'jquery';
 import { initializeApp } from "firebase/app";
 import { getPerformance } from "firebase/performance";
@@ -23,8 +22,6 @@ ReactDOM.render(
 );
 
 const Custom = () => {
-  const $body = $('body');
-  const $document = $(document);
   const $window = $(window);
 
   const init = () => {
@@ -60,7 +57,3 @@ const Custom = () => {
 $(function () {
   Custom();
 })
-// // If you want to start measuring performance in your app, pass a function
-// // to log results (for example: reportWebVitals(console.log))
-// // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-// reportWebVitals();

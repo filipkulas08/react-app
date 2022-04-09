@@ -1,4 +1,3 @@
-import {Helmet} from "react-helmet";
 import './styles/index.css';
 import logo from './icons/logo.svg';
 import close from './icons/close.svg';
@@ -26,9 +25,6 @@ import video from './videos/dental-video.mp4';
 function App() {
   return (
     <div className="App">
-        {/* <Helmet>
-          <script src = 'jquery.datetimepicker.full.min.js' type = 'text/javascript' />
-      </Helmet> */}
       <header className="first-header">
         <div className="columns">
             <section className="col col-large-12-of-12 col-medium-12-of-12 col-small-12-of-12">
@@ -388,39 +384,44 @@ function App() {
                 <div className="columnLayoutBlock">
                     <div className="columns">
                         <div className="col col-large-12-of-12 col-medium-12-of-12 col-small-12-of-12">
-                            <h3>
+                            <h1>
                                 Get to know our office
-                            </h3>
-                            <h4>
-                                We have a modern, one of the best equipped offices in Poland, ready to receive patients.
-                            </h4>
-                            <div className="slider" id="slider">
-                                <ul>
-                                    <li>
-                                        <img src={slider1} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider2} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider3} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider4} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider5} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider6} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                    <li>
-                                        <img src={slider7} loading="lazy" alt="dental-office" width="640" height="427" />
-                                    </li>
-                                  </ul>
+                            </h1>
+                            <div className="container">
+                                <div className="carousel">
+                                    <div className="carousel-prev"></div>
+                                    <div className="carousel-next"></div>
+                                    <ul className="carousel-pagination">
+                                        <li className="carousel-bullet"></li>
+                                        <li className="carousel-bullet"></li>
+                                        <li className="carousel-bullet"></li>
+                                        <li className="carousel-bullet"></li>
+                                        <li className="carousel-bullet"></li>
+                                    </ul>
+                                    <ul className="carousel-container">
+                                        <li className="carousel-item">
+                                            <img src={slider1} loading="lazy" alt="dental-office"
+                                                width="840" height="427"/>
+                                        </li>
+                                        <li className="carousel-item">
+                                            <img src={slider2} loading="lazy" alt="dental-office"
+                                                width="840" height="427"/>
+                                        </li>
+                                        <li className="carousel-item">
+                                            <img src={slider3} loading="lazy" alt="dental-office"
+                                                width="840" height="427"/>
+                                        </li>
+                                        <li className="carousel-item">
+                                            <img src={slider4} loading="lazy" alt="dental-office"
+                                                width="840" height="427"/>
+                                        </li>
+                                        <li className="carousel-item">
+                                            <img src={slider5} loading="lazy" alt="dental-office"
+                                                width="840" height="427"/>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="button next"></div>
-
                         </div>
                     </div>
                 </div>
