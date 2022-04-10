@@ -1874,7 +1874,7 @@ section .section-body {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
   width: 40px;
-  z-index: 10;
+  z-index: 4;
 }
 
 .office .container .carousel-prev:hover, .office .container .carousel-next:hover {

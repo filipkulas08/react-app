@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import { getAuth, onAuthStateChanged  } from "firebase/auth";
-import { addDoc, where, getDocs, collection } from "firebase/firestore";
+import { query, addDoc, where, getDocs, collection } from "firebase/firestore";
 import { datetimepicker } from "jquery-datetimepicker/build/jquery.datetimepicker.full"
 
 const dateTimePicker = (db) => {
@@ -23,7 +23,7 @@ const dateTimePicker = (db) => {
             const $day = $Fulldate.getDate();
             var date = $month + '/' + $day + '/' + $year;
         
-            getDocs(collection(db, "Visits"), where("date", "==", date)).then((querySnapshot) => {
+            getDocs(query(collection(db, "Visits"), where("date", "==", date))).then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     var data = doc.data();
                         var hour = data.hour;
