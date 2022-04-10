@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-app/static/css/main.de6e9a34.css",
-    "main.js": "/react-app/static/js/main.8a22ef31.js",
+    "main.js": "/react-app/static/js/main.e8fa18ed.js",
     "static/media/dental-video.mp4": "/react-app/static/media/dental-video.af7e7131b13f37342722.mp4",
     "static/media/hero-dentist.webp": "/react-app/static/media/hero-dentist.0f0881820911c1b1d302.webp",
     "static/media/publicdomainq-dentist.svg": "/react-app/static/media/publicdomainq-dentist.547bc8a8870494fad2c701d91c5df9b0.svg",
@@ -10,8 +10,6 @@
     "static/media/slider2.webp": "/react-app/static/media/slider2.c83b9ddb748054e82d58.webp",
     "static/media/slider4.webp": "/react-app/static/media/slider4.b4dc7b5713fe2691fa45.webp",
     "static/media/slider5.webp": "/react-app/static/media/slider5.f90facf6989736c8ecfb.webp",
-    "static/media/slider6.webp": "/react-app/static/media/slider6.95ee8d80aaa2445a61ce.webp",
-    "static/media/slider7.webp": "/react-app/static/media/slider7.cd67052cdd76ed79e31d.webp",
     "static/media/logo.svg": "/react-app/static/media/logo.e8ace7e6ae58def449d683414be0bb15.svg",
     "static/media/orthodontic.svg": "/react-app/static/media/orthodontic.92d970121f90ab7cbd8ba86cb3c60e63.svg",
     "static/media/prosthetic.svg": "/react-app/static/media/prosthetic.3724d7d0e2c79867baf7faa9f134d406.svg",
@@ -29,10 +27,10 @@
     "static/media/google.svg": "/react-app/static/media/google.b8e3d0b5176a83b562b3.svg",
     "index.html": "/react-app/index.html",
     "main.de6e9a34.css.map": "/react-app/static/css/main.de6e9a34.css.map",
-    "main.8a22ef31.js.map": "/react-app/static/js/main.8a22ef31.js.map"
+    "main.e8fa18ed.js.map": "/react-app/static/js/main.e8fa18ed.js.map"
   },
   "entrypoints": [
     "static/css/main.de6e9a34.css",
-    "static/js/main.8a22ef31.js"
+    "static/js/main.e8fa18ed.js"
   ]
 }
