@@ -7,17 +7,11 @@ const countdownTimer = (db) => {
     const userId = localStorage.getItem('userID');
     var today = new Date().getTime();
 
-    getDocs(query(collection(db, "Visits"), where("dateNumber", "<", today), where("userId", "==", userId))).then((querySnapshot) => {
+    getDocs(query(collection(db, "Visits"), where("dateNumber", ">=", today), where("userId", "==", userId))).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             var data = doc.data();
             var date = data.date;
             var hour = data.hour;
-            console.log(data.dateNumber)
-            console.log(today)
-            console.log(data.dateNumber >= today)
-            console.log(data.userId)
-            console.log(userId)
-            console.log(data.userId === userId)
             if (date) {
                 $bookingForm.addClass('hidden');
                 $nextVisit.addClass('visible');
