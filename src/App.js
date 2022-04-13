@@ -15,8 +15,6 @@ import slider2 from './images/slider2.webp';
 import slider3 from './images/slider3.webp';
 import slider4 from './images/slider4.webp';
 import slider5 from './images/slider5.webp';
-import slider6 from './images/slider6.webp';
-import slider7 from './images/slider7.webp';
 import modalDental from './images/publicdomainq-dentist.svg';
 import hero from './images/hero-dentist.webp';
 import video from './videos/dental-video.mp4';

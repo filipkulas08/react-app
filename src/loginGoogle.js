@@ -1,13 +1,12 @@
 import $ from 'jquery';
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged  } from "firebase/auth";
+import firebase from 'firebase';
 
 const loginGoogle = () => {
     const $loginButton = $('#login');
-    const auth = getAuth();
-    let provider = new GoogleAuthProvider();
+    let provider = new firebase.auth.GoogleAuthProvider()
 
     $loginButton.on('click', () => {
-        signInWithPopup(auth, provider).then(function(firebaseUser) {
+        firebase.auth().signInWithPopup(provider).then(function(firebaseUser) {
             localStorage.setItem('myPage.expectSignIn', '1');
             window.location.reload();
         }
@@ -15,7 +14,7 @@ const loginGoogle = () => {
             console.log(e)
         })
         
-        onAuthStateChanged(auth, (user) => {
+        firebase.auth().onAuthStateChanged((user) => {
             if (user) {
               localStorage.setItem('userID', user.uid)
             }

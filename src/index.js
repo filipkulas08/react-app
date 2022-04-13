@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import $ from 'jquery';
-import { initializeApp } from "firebase/app";
-import { getPerformance } from "firebase/performance";
-import { getFirestore } from "firebase/firestore";
 import menu from './menu.js';
 import loginGoogle from './loginGoogle.js';
 import login from './login.js';
@@ -13,6 +10,7 @@ import dateTimePicker from './dateTimePicker.js'
 import countdownTimer from './countdownTimer.js';
 import slider from './slider.js';
 import backToTop from './backToTop.js';
+import firebase from 'firebase';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -35,12 +33,11 @@ const Custom = () => {
       measurementId: "G-XTXKKCG4VK"
     };
     
+    const app = firebase.initializeApp(firebaseConfig);
+      const perf = firebase.performance(app);
+      const db = firebase.firestore(app);
 
-    const app = initializeApp(firebaseConfig);
-    const perf = getPerformance(app);
-    const db = getFirestore(app);
-    
-    
+
       menu();
       loginGoogle();
       login(perf);

@@ -1,4 +1,3 @@
-import $ from 'jquery';
 const slider = () => {
 
     var carousel = document.querySelector('.carousel');

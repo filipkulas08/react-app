@@ -1,31 +1,37 @@
 import $ from 'jquery';
-import { query, where, getDocs, collection } from "firebase/firestore";
+
 const countdownTimer = (db) => {
     const $bookingForm = $('.booking-form');
     const $nextVisit = $('.nextVisit');
     const $countdownTiles = $(".tiles");
     const userId = localStorage.getItem('userID');
     var today = new Date().getTime();
+    
 
-    getDocs(query(collection(db, "Visits"), where("dateNumber", ">=", today), where("userId", "==", userId))).then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            var data = doc.data();
-            var date = data.date;
-            var hour = data.hour;
-            if (date) {
-                $bookingForm.addClass('hidden');
-                $nextVisit.addClass('visible');
-                countdown(date, hour);
-            } else {
-                $bookingForm.removeClass('hidden');
-                $nextVisit.removeClass('visible');
-            }
+    db.collection("Visits").where("dateNumber", ">=", today).where("userId", "==", userId)
+        .get()
+        .then(function (querySnapshot) {
+            querySnapshot.forEach(function (doc) {
+                var data = doc.data();
+                var date = data.date;
+                var hour = data.hour;
+                if (date) {
+                    $bookingForm.addClass('hidden');
+                    $nextVisit.addClass('visible');
+                    countdown(date,hour);
+                } else {
+                    $bookingForm.removeClass('hidden');
+                    $nextVisit.removeClass('visible');
+                }
+            });
         })
-    })
-
-    var countdown = (date, hour) => {
+        .catch(function (error) {
+            console.log("Error getting documents: ", error);
+        });
+    
+    var countdown = (date,hour) => {
         var countdownDate = new Date(date + ' ' + hour).getTime();
-        setInterval(function () {
+        var x = setInterval(function() {
 
             var now = new Date().getTime();
             var distance = countdownDate - now;
@@ -34,7 +40,7 @@ const countdownTimer = (db) => {
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
             $countdownTiles.html("<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>");
-        }, 1000);
+          }, 1000);
     }
 
 }

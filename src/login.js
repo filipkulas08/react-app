@@ -1,15 +1,15 @@
 import $ from 'jquery';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut  } from "firebase/auth";
+import firebase from 'firebase';
 
 const login = () => {
     const $signUpButton = $('#signUp');
     const $loginButton = $('#loginBtn');
     const $logoutButton = $('.logoutButton');
     const $errorMessage = $('.errorMessage');
-    const auth = getAuth();
+    
 
     const loginFunction = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password).then(function(firebaseUser) {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function(firebaseUser) {
             localStorage.setItem('myPage.expectSignIn', '1');
             window.location.reload();
         }
@@ -20,7 +20,7 @@ const login = () => {
             $('input').val('');
         });
 
-        onAuthStateChanged(auth, (user) => {
+        firebase.auth().onAuthStateChanged((user) => {
             if (user) {
               localStorage.setItem('userID', user.uid)
             }
@@ -32,7 +32,7 @@ const login = () => {
         var email = document.getElementById('emailRegister').value;
         var password = document.getElementById('passwordRegister').value;
 
-        createUserWithEmailAndPassword(auth, email, password).then(function(){
+        firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
             loginFunction(email, password);
         }).catch(e=>{
         });
@@ -48,7 +48,7 @@ const login = () => {
     });
 
     $logoutButton.on('click', () => {
-        signOut(auth).then(function (firebaseUser) {
+        firebase.auth().signOut().then(function (firebaseUser) {
             localStorage.removeItem('myPage.expectSignIn');
             window.location.reload();
         }).catch(e => {
