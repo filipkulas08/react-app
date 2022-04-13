@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-app/static/css/main.3a756ab7.css",
-    "main.js": "/react-app/static/js/main.de8cee53.js",
+    "main.js": "/react-app/static/js/main.070d8fb3.js",
     "static/media/dental-video.mp4": "/react-app/static/media/dental-video.af7e7131b13f37342722.mp4",
     "static/media/hero-dentist.webp": "/react-app/static/media/hero-dentist.0f0881820911c1b1d302.webp",
     "static/media/publicdomainq-dentist.svg": "/react-app/static/media/publicdomainq-dentist.547bc8a8870494fad2c701d91c5df9b0.svg",
@@ -27,10 +27,10 @@
     "static/media/google.svg": "/react-app/static/media/google.b8e3d0b5176a83b562b3.svg",
     "index.html": "/react-app/index.html",
     "main.3a756ab7.css.map": "/react-app/static/css/main.3a756ab7.css.map",
-    "main.de8cee53.js.map": "/react-app/static/js/main.de8cee53.js.map"
+    "main.070d8fb3.js.map": "/react-app/static/js/main.070d8fb3.js.map"
   },
   "entrypoints": [
     "static/css/main.3a756ab7.css",
-    "static/js/main.de8cee53.js"
+    "static/js/main.070d8fb3.js"
   ]
 }
